@@ -52,13 +52,7 @@
 \section{Buffer Overflow}
 
 The \emph{buf} buffer is overflowed because it is filled with bytes from two other buffers, \emph{buf1} and \emph{buf2} who each (possibly) holds the same number of maximum bytes as \emph{buf}, \emph{BUFSIZE}.
-Utilizing the vulnerability to pop shell is similar to tutorial 2, we fill the stack from the return address slot onwards with these 3 things in order:
-\begin{enumerate}
-    \item Address to gadget
-    \item Address to string "\emph{\textbackslash bin\textbackslash sh}"
-    \item Address to \emph{system}
-\end{enumerate}
-We want the gadget to pop the stack argument (address to string "\emph{\textbackslash bin\textbackslash sh}") into \emph{\$rdi}, which will cause the subsequent call the \emph{system} to pop shell.\\
+Utilizing the vulnerability to pop shell is similar to tutorial 2, we put the shellcode at the start of the buffer, then overwrite the return address to the buffer's address.
 
 The first difficulty is given the full payload, how to write the files \emph{exploit1, exploit2}. By inspection, we can alternatingly write 1 byte from the full payload to \emph{exploit1, exploit2}, starting from \emph{exploit1}. Then when the bytes are read off from the exploit files into \emph{buf}, the effect is that the payload will be written correctly into \emph{buf}. The below is the python code to do this.\\\\
 \includegraphics[scale=0.7]{./a2/buffer_overflow/alternate.PNG}\\
@@ -77,10 +71,11 @@ So to make sure that these values are consistent, our (full) payload will slot t
 
 The values of \emph{byte\_read1, byte\_read2} will be the half of the payload length (which corresponds to the length of files \emph{exploit1, exploit2}). The value of \emph{idx} trickier. In normal operation, it increments by 1 every time we (over)write a byte. Since we are working in a little endian system, the first byte we overwrite to \emph{idx} is the counting byte. So at that point in time, it is distance from the \emph{buf} address, excluding this first \emph{idx} byte.\\
 
-To run the exploit, first run \emph{initexploit.py}. This will generate the files to be read. Then run the program, and shell should pop.\\
+To run the exploit, first run the program with any input. This will give us the buffer's starting address, with which we compute the rest of the local variable addresses using offsets from a locally compiled version of the program (refer to the above images), as shown below:\\\\
+\includegraphics[scale=0.7]{./a2/buffer_overflow/offset.PNG}\\
 
-All addresses found in \emph{initexploit.py} were found using GDB, similar to tutorial 2. \textbf{NOTE} that this differs from the screenshots as the exploit was developed on another machine first, then addressed were changed to the testing machine (tutorial2.ova). Below is a screenshot of it working.\\\\
-\includegraphics[scale=1.2]{./a2/buffer_overflow/result.PNG}
+Then give as input the hex address of the buffer starting location to the exploit script \emph{initexploit.py}, and it will generate the exploit files to be read. After that, run the program again. Below is a screenshot of it working.\\\\
+\includegraphics[scale=1]{./a2/buffer_overflow/result.PNG}
 
 %======================================
 

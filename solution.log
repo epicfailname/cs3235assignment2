@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  18 MAR 2020 01:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  18 MAR 2020 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -185,120 +185,117 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 5
-8.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-
- []
-
 <./a2/buffer_overflow/alternate.PNG, id=1, 330.63525pt x 242.70676pt>
 File: ./a2/buffer_overflow/alternate.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/alternate.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/alternate.PNG  used on input line
- 64.
+ 58.
 (pdftex.def)             Requested size: 231.4431pt x 169.89355pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--65
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+
+ []
+
+<./a2/buffer_overflow/extravariables.PNG, id=3, 264.38776pt x 186.6975pt>
+File: ./a2/buffer_overflow/extravariables.PNG Graphic file (type png)
+<use ./a2/buffer_overflow/extravariables.PNG>
+Package pdftex.def Info: ./a2/buffer_overflow/extravariables.PNG  used on input
+ line 61.
+(pdftex.def)             Requested size: 185.07016pt x 130.68735pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
 [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<./a2/buffer_overflow/extravariables.PNG, id=14, 264.38776pt x 186.6975pt>
-File: ./a2/buffer_overflow/extravariables.PNG Graphic file (type png)
-<use ./a2/buffer_overflow/extravariables.PNG>
-Package pdftex.def Info: ./a2/buffer_overflow/extravariables.PNG  used on input
- line 67.
-(pdftex.def)             Requested size: 185.07016pt x 130.68735pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-
- []
-
-<./a2/buffer_overflow/extravariablesexploit.PNG, id=15, 815.4465pt x 534.798pt>
-
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./a2/bu
+ffer_overflow/alternate.PNG>]
+<./a2/buffer_overflow/extravariablesexploit.PNG, id=14, 811.833pt x 421.575pt>
 File: ./a2/buffer_overflow/extravariablesexploit.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/extravariablesexploit.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/extravariablesexploit.PNG  used o
-n input line 76.
-(pdftex.def)             Requested size: 407.72224pt x 267.39835pt.
+n input line 70.
+(pdftex.def)             Requested size: 405.9155pt x 210.78697pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
-
- []
-
-[2 <./a2/buffer_overflow/alternate.PNG> <./a2/buffer_overflow/extravariables.PN
-G>]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-<./a2/buffer_overflow/result.PNG, id=21, 362.5545pt x 185.493pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+[2 <./a2/buffer_overflow/extravariables.PNG> <./a2/buffer_overflow/extravariabl
+esexploit.PNG>]
+<./a2/buffer_overflow/offset.PNG, id=20, 452.28975pt x 271.0125pt>
+File: ./a2/buffer_overflow/offset.PNG Graphic file (type png)
+<use ./a2/buffer_overflow/offset.PNG>
+Package pdftex.def Info: ./a2/buffer_overflow/offset.PNG  used on input line 75
+.
+(pdftex.def)             Requested size: 316.60066pt x 189.70744pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
+
+ []
+
+<./a2/buffer_overflow/result.PNG, id=21, 440.847pt x 242.70676pt>
 File: ./a2/buffer_overflow/result.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/result.PNG>
-Package pdftex.def Info: ./a2/buffer_overflow/result.PNG  used on input line 83
+Package pdftex.def Info: ./a2/buffer_overflow/result.PNG  used on input line 78
 .
-(pdftex.def)             Requested size: 435.06323pt x 222.59047pt.
+(pdftex.def)             Requested size: 440.84592pt x 242.70615pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
 
-Overfull \hbox (1.44324pt too wide) in paragraph at lines 82--84
+Overfull \hbox (7.22592pt too wide) in paragraph at lines 77--79
 [] 
  []
 
-[3 <./a2/buffer_overflow/extravariablesexploit.PNG>] [4 <./a2/buffer_overflow/r
-esult.PNG>] [5] [6] (./solution.aux) ) 
+[3 <./a2/buffer_overflow/offset.PNG>] [4 <./a2/buffer_overflow/result.PNG>]
+[5] [6] (./solution.aux) ) 
 Here is how much of TeX's memory you used:
- 2496 strings out of 481250
- 34304 string characters out of 5918206
- 270801 words of memory out of 5000000
- 17752 multiletter control sequences out of 15000+600000
- 535979 words of font info for 32 fonts, out of 8000000 for 9000
+ 2480 strings out of 481250
+ 34131 string characters out of 5918206
+ 269801 words of memory out of 5000000
+ 17740 multiletter control sequences out of 15000+600000
+ 535173 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,5n,25p,518b,207s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts
-/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/pl/p
-lit.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/pl/plbx12.pfb></u
-sr/local/texlive/2019/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2019/
-texmf-dist/fonts/type1/public/pl/plsl12.pfb></usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/pl/plti12.pfb>
-Output written on solution.pdf (6 pages, 171631 bytes).
+ 30i,5n,25p,518b,141s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/p
+l/plit.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/pl/plrm.enc}</us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/pl/plbx12.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/pl/plr12.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/pl/plr17.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/pl/plti12.pfb>
+Output written on solution.pdf (6 pages, 211081 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 52 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
