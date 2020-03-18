@@ -24,8 +24,8 @@ void rop(FILE *f)
 
 	
     open("secret.txt", 0);
-    read(3, 0x7ffffffedbd8, 14);
-    write(1, 0x7ffffffedbd8, 14);
+    read(3, 0x7ffffffedbd8, 1400);
+    write(1, 0x7ffffffedbd8, 1400);
     /*
     read(3, 0x7ffffffedbd8, 144455557);
     write(1, 0x7ffffffedbd8, 144455557);
