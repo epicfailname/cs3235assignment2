@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  20 MAR 2020 01:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.5)  20 MAR 2020 01:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**solution.tex
-(./solution.tex
+**A0121749A.tex
+(./A0121749A.tex
 LaTeX2e <2020-02-02>
 L3 programming layer <2020-01-31>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
@@ -297,8 +297,8 @@ File: l3backend-pdfmode.def 2019-04-06 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count276
 \l__pdf_internal_box=\box52
 )
-(./solution.aux)
-\openout1 = `solution.aux'.
+No file A0121749A.aux.
+\openout1 = `A0121749A.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
@@ -318,7 +318,6 @@ LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
 LaTeX Font Info:    ... okay on input line 54.
-
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count277
@@ -359,12 +358,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 54.
 LaTeX Info: Redefining \pageref on input line 54.
 LaTeX Info: Redefining \nameref on input line 54.
- (./solution.out) (./solution.out)
 \@outlinefile=\write3
-\openout3 = `solution.out'.
+\openout3 = `A0121749A.out'.
 
 \c@lstlisting=\count284
-<./a2/buffer_overflow/alternate.PNG, id=16, 330.63525pt x 242.70676pt>
+<./a2/buffer_overflow/alternate.PNG, id=4, 330.63525pt x 242.70676pt>
 File: ./a2/buffer_overflow/alternate.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/alternate.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/alternate.PNG  used on input line
@@ -380,7 +378,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
  []
 
-<./a2/buffer_overflow/extravariables.PNG, id=18, 264.38776pt x 186.6975pt>
+<./a2/buffer_overflow/extravariables.PNG, id=6, 264.38776pt x 186.6975pt>
 File: ./a2/buffer_overflow/extravariables.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/extravariables.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/extravariables.PNG  used on input
@@ -400,7 +398,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./a2/bu
 ffer_overflow/alternate.PNG>]
-<./a2/buffer_overflow/extravariablesexploit.PNG, id=29, 811.833pt x 421.575pt>
+<./a2/buffer_overflow/extravariablesexploit.PNG, id=18, 811.833pt x 421.575pt>
 File: ./a2/buffer_overflow/extravariablesexploit.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/extravariablesexploit.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/extravariablesexploit.PNG  used o
@@ -423,7 +421,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
 [2 <./a2/buffer_overflow/extravariables.PNG> <./a2/buffer_overflow/extravariabl
 esexploit.PNG>]
-<./a2/buffer_overflow/offset.PNG, id=39, 452.28975pt x 271.0125pt>
+<./a2/buffer_overflow/offset.PNG, id=28, 452.28975pt x 271.0125pt>
 File: ./a2/buffer_overflow/offset.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/offset.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/offset.PNG  used on input line 84
@@ -439,7 +437,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-<./a2/buffer_overflow/result.PNG, id=40, 440.847pt x 242.70676pt>
+<./a2/buffer_overflow/result.PNG, id=29, 440.847pt x 242.70676pt>
 File: ./a2/buffer_overflow/result.PNG Graphic file (type png)
 <use ./a2/buffer_overflow/result.PNG>
 Package pdftex.def Info: ./a2/buffer_overflow/result.PNG  used on input line 87
@@ -470,13 +468,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 
  []
 
-<./a2/format_string/result1.PNG, id=51, 392.06474pt x 167.4255pt>
+<./a2/format_string/result1.PNG, id=40, 392.06474pt x 167.4255pt>
 File: ./a2/format_string/result1.PNG Graphic file (type png)
 <use ./a2/format_string/result1.PNG>
 Package pdftex.def Info: ./a2/format_string/result1.PNG  used on input line 101
 .
 (pdftex.def)             Requested size: 392.06378pt x 167.42508pt.
-<./a2/format_string/result2.PNG, id=52, 395.67825pt x 266.79675pt>
+<./a2/format_string/result2.PNG, id=41, 395.67825pt x 266.79675pt>
 File: ./a2/format_string/result2.PNG Graphic file (type png)
 <use ./a2/format_string/result2.PNG>
 Package pdftex.def Info: ./a2/format_string/result2.PNG  used on input line 102
@@ -497,7 +495,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-<./a2/format_string/script.PNG, id=58, 597.432pt x 348.70274pt>
+<./a2/format_string/script.PNG, id=48, 597.432pt x 348.70274pt>
 File: ./a2/format_string/script.PNG Graphic file (type png)
 <use ./a2/format_string/script.PNG>
 Package pdftex.def Info: ./a2/format_string/script.PNG  used on input line 106.
@@ -533,7 +531,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
-<./a2/rop/stack24.PNG, id=74, 595.62524pt x 342.68025pt>
+<./a2/rop/stack24.PNG, id=64, 595.62524pt x 342.68025pt>
 File: ./a2/rop/stack24.PNG Graphic file (type png)
 <use ./a2/rop/stack24.PNG>
 Package pdftex.def Info: ./a2/rop/stack24.PNG  used on input line 127.
@@ -558,7 +556,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--132
 
  []
 
-<./a2/rop/stack24_ebp.PNG, id=80, 596.82974pt x 309.5565pt>
+<./a2/rop/stack24_ebp.PNG, id=71, 596.82974pt x 309.5565pt>
 File: ./a2/rop/stack24_ebp.PNG Graphic file (type png)
 <use ./a2/rop/stack24_ebp.PNG>
 Package pdftex.def Info: ./a2/rop/stack24_ebp.PNG  used on input line 133.
@@ -583,7 +581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--139
 
  []
 
-<./a2/rop/dump1.PNG, id=81, 516.7305pt x 199.34476pt>
+<./a2/rop/dump1.PNG, id=72, 516.7305pt x 199.34476pt>
 File: ./a2/rop/dump1.PNG Graphic file (type png)
 <use ./a2/rop/dump1.PNG>
 Package pdftex.def Info: ./a2/rop/dump1.PNG  used on input line 140.
@@ -608,7 +606,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-<./a2/rop/dump1_ext.PNG, id=87, 517.935pt x 228.25275pt>
+<./a2/rop/dump1_ext.PNG, id=78, 517.935pt x 228.25275pt>
 File: ./a2/rop/dump1_ext.PNG Graphic file (type png)
 <use ./a2/rop/dump1_ext.PNG>
 Package pdftex.def Info: ./a2/rop/dump1_ext.PNG  used on input line 146.
@@ -624,7 +622,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--149
  []
 
 [10 <./a2/rop/dump1.PNG> <./a2/rop/dump1_ext.PNG>]
-<./a2/rop/hclibc.PNG, id=94, 469.755pt x 263.7855pt>
+<./a2/rop/hclibc.PNG, id=85, 469.755pt x 263.7855pt>
 File: ./a2/rop/hclibc.PNG Graphic file (type png)
 <use ./a2/rop/hclibc.PNG>
 Package pdftex.def Info: ./a2/rop/hclibc.PNG  used on input line 164.
@@ -649,17 +647,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--172
 
  []
 
-<./a2/rop/stack24_libc.PNG, id=107, 596.82974pt x 313.17pt>
+<./a2/rop/stack24_libc.PNG, id=98, 596.82974pt x 313.17pt>
 File: ./a2/rop/stack24_libc.PNG Graphic file (type png)
 <use ./a2/rop/stack24_libc.PNG>
 Package pdftex.def Info: ./a2/rop/stack24_libc.PNG  used on input line 173.
 (pdftex.def)             Requested size: 417.77797pt x 219.21748pt.
-<./a2/rop/dump2.PNG, id=108, 516.7305pt x 166.221pt>
+<./a2/rop/dump2.PNG, id=99, 516.7305pt x 166.221pt>
 File: ./a2/rop/dump2.PNG Graphic file (type png)
 <use ./a2/rop/dump2.PNG>
 Package pdftex.def Info: ./a2/rop/dump2.PNG  used on input line 174.
 (pdftex.def)             Requested size: 361.70888pt x 116.35388pt.
-<./a2/rop/dump2_ext.PNG, id=109, 519.74174pt x 219.82124pt>
+<./a2/rop/dump2_ext.PNG, id=100, 519.74174pt x 219.82124pt>
 File: ./a2/rop/dump2_ext.PNG Graphic file (type png)
 <use ./a2/rop/dump2_ext.PNG>
 Package pdftex.def Info: ./a2/rop/dump2_ext.PNG  used on input line 175.
@@ -684,7 +682,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
-<./a2/rop/calclibc.PNG, id=117, 557.08125pt x 206.57175pt>
+<./a2/rop/calclibc.PNG, id=108, 557.08125pt x 206.57175pt>
 File: ./a2/rop/calclibc.PNG Graphic file (type png)
 <use ./a2/rop/calclibc.PNG>
 Package pdftex.def Info: ./a2/rop/calclibc.PNG  used on input line 179.
@@ -701,17 +699,17 @@ LaTeX Font Info:    Trying to load font information for OT4+cmtt on input line
 (/usr/local/texlive/2019/texmf-dist/tex/latex/polski/ot4cmtt.fd
 File: ot4cmtt.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-<./a2/rop/libcaddr.PNG, id=132, 336.65775pt x 65.64525pt>
+<./a2/rop/libcaddr.PNG, id=123, 336.65775pt x 65.64525pt>
 File: ./a2/rop/libcaddr.PNG Graphic file (type png)
 <use ./a2/rop/libcaddr.PNG>
 Package pdftex.def Info: ./a2/rop/libcaddr.PNG  used on input line 200.
 (pdftex.def)             Requested size: 336.6569pt x 65.64507pt.
-<./a2/rop/openoffset.PNG, id=133, 437.83575pt x 19.272pt>
+<./a2/rop/openoffset.PNG, id=124, 437.83575pt x 19.272pt>
 File: ./a2/rop/openoffset.PNG Graphic file (type png)
 <use ./a2/rop/openoffset.PNG>
 Package pdftex.def Info: ./a2/rop/openoffset.PNG  used on input line 202.
 (pdftex.def)             Requested size: 437.83469pt x 19.27194pt.
-<./a2/rop/openaddr.PNG, id=134, 336.65775pt x 21.07875pt>
+<./a2/rop/openaddr.PNG, id=125, 336.65775pt x 21.07875pt>
 File: ./a2/rop/openaddr.PNG Graphic file (type png)
 <use ./a2/rop/openaddr.PNG>
 Package pdftex.def Info: ./a2/rop/openaddr.PNG  used on input line 204.
@@ -736,7 +734,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
-<./a2/rop/exploit.PNG, id=147, 775.09575pt x 475.17525pt>
+<./a2/rop/exploit.PNG, id=138, 775.09575pt x 475.17525pt>
 File: ./a2/rop/exploit.PNG Graphic file (type png)
 <use ./a2/rop/exploit.PNG>
 Package pdftex.def Info: ./a2/rop/exploit.PNG  used on input line 213.
@@ -752,13 +750,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--214
  []
 
 [16 <./a2/rop/exploit.PNG>]
-<./a2/rop/sceA.PNG, id=153, 336.65775pt x 358.941pt>
+<./a2/rop/sceA.PNG, id=144, 336.65775pt x 358.941pt>
 File: ./a2/rop/sceA.PNG Graphic file (type png)
 <use ./a2/rop/sceA.PNG>
 Package pdftex.def Info: ./a2/rop/sceA.PNG  used on input line 227.
 (pdftex.def)             Requested size: 336.6569pt x 358.94011pt.
  [17 <./a2/rop/sceA.PNG>]
-<./a2/rop/sceB.PNG, id=164, 336.0555pt x 379.4175pt>
+<./a2/rop/sceB.PNG, id=155, 336.0555pt x 379.4175pt>
 File: ./a2/rop/sceB.PNG Graphic file (type png)
 <use ./a2/rop/sceB.PNG>
 Package pdftex.def Info: ./a2/rop/sceB.PNG  used on input line 239.
@@ -768,21 +766,28 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 252.
 
 [19]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
- (./solution.aux)
+ (./A0121749A.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
-Package rerunfilecheck Info: File `solution.out' has not changed.
-(rerunfilecheck)             Checksum: DEBB790DE7D946752034E29E91FE562F;167.
+
+
+Package rerunfilecheck Warning: File `A0121749A.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `A0121749A.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  DEBB790DE7D946752034E29E91FE562F;167.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 252.
  ) 
 Here is how much of TeX's memory you used:
- 8039 strings out of 481250
- 120721 string characters out of 5918206
- 564088 words of memory out of 5000000
- 23086 multiletter control sequences out of 15000+600000
+ 8029 strings out of 481250
+ 120617 string characters out of 5918206
+ 564090 words of memory out of 5000000
+ 23082 multiletter control sequences out of 15000+600000
  540130 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,5n,51p,518b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,51p,519b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/pl/pltt.enc}{/usr/local/t
 exlive/2019/texmf-dist/fonts/enc/dvips/pl/plrm.enc}{/usr/local/texlive/2019/tex
 mf-dist/fonts/enc/dvips/pl/plit.enc}</usr/local/texlive/2019/texmf-dist/fonts/t
@@ -794,10 +799,10 @@ pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/pl/plsl12.pfb></usr/loca
 l/texlive/2019/texmf-dist/fonts/type1/public/pl/plti12.pfb></usr/local/texlive/
 2019/texmf-dist/fonts/type1/public/pl/pltt12.pfb>
-Output written on solution.pdf (19 pages, 848928 bytes).
+Output written on A0121749A.pdf (19 pages, 848659 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
+ 225 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
  56 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
