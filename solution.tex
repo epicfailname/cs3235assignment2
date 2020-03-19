@@ -4,8 +4,17 @@
 \newtheorem{define}{Definition}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{float}
+\usepackage{listings}
+\lstset{
+    numbers=left,
+    numberstyle=\small,
+    numbersep=8pt,
+    frame = single,
+    language=C,
+framexleftmargin=15pt}
 
 \oddsidemargin=0.15in
 \evensidemargin=0.15in
@@ -82,8 +91,23 @@ Then give as input the hex address of the buffer starting location to the exploi
 \newpage
 \section{Format String Attack}
 
+The vulnerability is in the \emph{print(buf)} line, since we are using unsanitised user input as a format string. Overwriting the \emph{jackpot} variable is the same as Tutorial 2.\\
 
+First, run the program with any input, which will output the \emph{jackpot} variable address.
+Run the exploit-generating script \emph{initexploit.py} and feed the \emph{jackpot} variable address to the script.
+This will generate the \emph{exploit} file.
+Lastly, run the program and pipe in the \emph{exploit} file as input. See the 2 images below for the exact commands.\\\\
 
+\includegraphics[scale=0.7]{./a2/format_string/result1.PNG}\\
+\includegraphics[scale=0.7]{./a2/format_string/result2.PNG}\\
+
+The script to generate exploit file is as follows.\\\\
+
+\includegraphics[scale=0.7]{./a2/format_string/script.PNG}\\
+
+We first need to print $0x1337 = 4919$ characters, then place the format specifier \emph{\%8\$n} to write to the 8th positional argument with respect to the print stack frame.
+As shown in the comments in the picture above, we place the address of the \emph{jackpot} exactly where the print function will retrieve the 8th positional argument from.
+Last but not least, we align everything properly by padding the start with the character "A" and subtracting the number of "A"'s printed from the padded format specifer ($4919 - 6 = 4913$).
 
 
 %======================================
@@ -91,6 +115,130 @@ Then give as input the hex address of the buffer starting location to the exploi
 \newpage
 \section{Return-oriented Programming}
 
+First, we can give as input a negative value which causes the check at line 12 to pass.
+Coincidentally, casting signed variable (\emph{i}) to unsigned in line 21 causes negatively-valued signed values to be intepreted as (large) unsigned values.
+Which means that \emph{read\_size} will likely take the value of \emph{fsize}, which is the size of the input \emph{exploit} file.
+This could be more than the allocated buffer (\emph{buf}) size of $80$, which causes the overflow.\\
 
+Now we have the overflow, we first need a way to extract stack addresses, and libc addresses. In particular, we need the stack address because stack addresses usually shift around (compared to GDB) due to extra environment variables.\\
+
+In line 25, the program prints the \emph{buf}, which reads characters starting at the address of \emph{buf} until it encounters the NULL (\emph{0x00}) character. This is an information leak, allowing us to read off the stack data.\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/stack24.PNG}\\
+
+The first piece of data we read is the saved EBP pointer, which references the stack.
+This is located at address \emph{0x7ffffffedb40} as shown above.
+The first script to run is \emph{initexploit1a.py}, which will generate an exploit file that fills up the stack until right before the address.\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/stack24_ebp.PNG}\\
+
+Subsequently giving the program "-1" as input will print the full \emph{exploit} file to \emph{buf}.
+Line 25 then prints starting from \emph{0x7ffffffedb10} (\emph{buf} address), until past the saved EBP address.
+Dump the output to a file \emph{dump1}.
+Examining the output using \emph{hexdump} reveals that the saved EBP is leaked (last few bytes).\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/dump1.PNG}\\
+
+Note that the full 8 bytes of the address is not leaked, since the last few \emph{0x00} bytes terminates the reading of \emph{puts}, and the last byte is \emph{0x0a} the newline character appended by \emph{puts}.\\
+
+Then running \emph{initexploit1b.py} will extract the address from the dump, and return it.\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/dump1_ext.PNG}\\
+
+Now, the libc addresses. There are some assumptions not explicitly stated (or refuted) in the assignment pdf. I will list the scenarios which affect how to run the exploit.\\
+
+\subsection*{A: Victim machine arbitrary with GDB}
+In this case, we have access to GDB, and the compiled binary.
+Meaning we can extract all required addresses in libc from GDB.
+Simply follow the tutorial and run the commands
+\begin{enumerate}
+    \item p open
+    \item p read
+    \item p write
+    \item asm "pop rdi; ret" libc
+    \item asm "pop rsi; ret" libc
+    \item asm "pop rdx; ret" libc
+\end{enumerate}
+to find all the addresses and gadgets. Then simply hardcode the addresses into the \emph{initexploit\_vm.py} file like so:\\\\
+\includegraphics[scale=0.7]{./a2/rop/hclibc.PNG}\\
+
+\subsection*{B: Victim machine is the VM provided, no GDB}
+We can still proceed by leaking a libc address from the stack.
+Referring back to the untouched stack layout (first image of this task), we notice that address \emph{0x7ffffffedb28} holds a libc address.
+We can perform the same information leak as the EBP one, with few modifications to get this address out.
+The relevant script files are \emph{initexploit2a.py}, \emph{initexploit2b.py}.\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/stack24_libc.PNG}\\
+\includegraphics[scale=0.7]{./a2/rop/dump2.PNG}\\
+\includegraphics[scale=0.7]{./a2/rop/dump2_ext.PNG}\\
+
+After which, we can compute the offsets for gadgets using addresses from GDB on a local machine. This is shown in the below image, where \emph{s\_*} variables are hardcoded addresses.\\\\
+
+\includegraphics[scale=0.7]{./a2/rop/calclibc.PNG}\\
+
+This is useful for scenario such as network attacks, where as an attacker we don't have access to the actual file binaries and only the output.
+However, using this as a libc address may not be reliable (or even useful) since:
+\begin{enumerate}
+    \item We're using data leftover from a previous function call, not this \emph{rop} call. I tried to use the more reliable \emph{libc\_start} address, but this will mean I'll ovewrite the saved EBP/EIP addresses, causing the program to terminate without flushing the output buffer.
+    \item We use the address to calculate offsets. Meaning it depends on the locally retrieved libc addresses (\emph{s\_*} variables) being accurate, which implies that the machine used to develop the exploit have the exact same libc binary as the victim machine, which is unlikely.
+\end{enumerate}
+
+\subsection*{C: Victim machine is arbitrary, no GDB}
+In this case, we will have to extract the libc addresses ourselves from the actual libc binaries.
+In which case, we will need external tools to do so.
+I'll list some relevant commands and links to do so:
+\begin{enumerate}
+    \item "LD\_TRACE\_LOADED\_OBJECTS=1 rop" can be used to get the base libc address
+    \item "readelf -s /lib/x86\_64-linux-gnu/libc.so.6 | grep open" to get the open (and read/write) address offset
+    \item Use this tool \url{https://github.com/JonathanSalwan/ROPgadget} to search for gadgets' offsets, and add to libc base address
+\end{enumerate}
+Some images to show you it works:\\\\
+\includegraphics[scale=1]{./a2/rop/libcaddr.PNG}\\
+\includegraphics[scale=1]{./a2/rop/openoffset.PNG}\\
+Then adding the two gives you:\\\\
+\includegraphics[scale=1]{./a2/rop/openaddr.PNG}
+
+\newpage
+
+In any case, once you get all the addresses, just need to craft the \emph{exploit} file.\\
+
+We place the path of the file to be read at the start of \emph{buf}, and write to the stack right below where our payload ends (\emph{bufaddr} - len(\emph{exploit})).
+The full payload looks like this:\\\\
+
+\includegraphics[scale=0.6]{./a2/rop/exploit.PNG}\\
+
+There's not much to say, since this is really just copying the tutorial.
+To run the full exploit, do the following in order:
+
+\newpage
+
+\textbf{Scenario A}:
+\begin{enumerate}
+    \item python initexploit1a.py; echo "-1" $|$ ./rop $>$ dump1
+    \item python initexploit\_vm.py hclibc
+    \item secret.txt
+    \item 100
+    \item echo -1 $|$ ./rop
+\end{enumerate}
+
+\textbf{Scenario B}:
+\begin{enumerate}
+    \item python initexploit1a.py; echo "-1" $|$ ./rop $>$ dump1
+    \item python initexploit2a.py; echo "-1" $|$ ./rop $>$ dump2
+    \item python initexploit\_vm.py
+    \item secret.txt
+    \item 100
+    \item echo -1 $|$ ./rop
+\end{enumerate}
+
+\textbf{Scenario C}:\\
+You would first find the address, and replace the addresses of \emph{s\_*} variables in the \emph{initexploit\_vm.py} script. Then, run:
+\begin{enumerate}
+    \item python initexploit1a.py; echo "-1" $|$ ./rop $>$ dump1
+    \item python initexploit\_vm.py hclibc
+    \item secret.txt
+    \item 100
+    \item echo -1 $|$ ./rop
+\end{enumerate}
 
 \end{document}
